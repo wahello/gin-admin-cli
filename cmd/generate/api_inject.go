@@ -7,7 +7,7 @@ import (
 )
 
 func getAPIInjectFileName(dir string) string {
-	fullname := fmt.Sprintf("%s/internal/app/api/api.go", dir)
+	fullname := fmt.Sprintf("%s/internal/app/api/main.go", dir)
 	return fullname
 }
 

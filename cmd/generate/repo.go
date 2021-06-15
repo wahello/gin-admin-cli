@@ -20,7 +20,7 @@ func genModel(ctx context.Context, pkgName, dir, name, comment string) error {
 		"Comment": comment,
 	}
 
-	buf, err := execParseTpl(modelTpl, data)
+	buf, err := execParseTpl(repoTpl, data)
 	if err != nil {
 		return err
 	}
@@ -36,7 +36,7 @@ func genModel(ctx context.Context, pkgName, dir, name, comment string) error {
 	return execGoFmt(fullname)
 }
 
-const modelTpl = `
+const repoTpl = `
 package repo
 
 import (
